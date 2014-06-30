@@ -5,7 +5,7 @@ describe "Static pages" do
   describe "Help page" do
 
     it "should go to Help Page" do
-      visit '/static_pages/help'
+      visit '/help'
     end
   end
 end
