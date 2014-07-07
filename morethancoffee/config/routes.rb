@@ -5,6 +5,7 @@ Morethancoffee::Application.routes.draw do
   resources :users
   resources :events
   resources :sessions, only: [:new, :create, :destroy]
+  resources :attendances, only: [:create, :destroy]
   root  "users#new"
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
