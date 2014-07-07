@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :attendances
+  has_many :events, through: :attendances
+
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 	validates :name, presence: true, length: { maximum: 50 }
@@ -15,6 +18,32 @@ class User < ActiveRecord::Base
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+
+  def attending?(event)
+    attendances.find_by(event_id: event.id)
+  end
+
+  def attending!(event)
+    attendances.create!(event_id: event.id)
+  end
+
+  def notattending!(event)
+    attendances.find_by(event_id: event.id).destroy
+  end
+
+  # def attending
+  #   @title = "Attending"
+  #   @user = User.find(params[:id])
+  #   @events = @user.events
+  #   render 'show_follow'
+  # end
+
+  # def followers
+  #   @title = "Followers"
+  #   @user = User.find(params[:id])
+  #   @users = @user.followers.paginate(page: params[:page])
+  #   render 'show_follow'
+  # end
 
   private
 
