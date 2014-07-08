@@ -3,4 +3,9 @@
   <span class="gravatar"> 
      <%= gravatar_for user %>
   </span>
+
+  <%= form_for user, url: {action: "update"} do |f| %>
+  		<%= f.hidden_field :receiver_id, :value => user.id %>
+  		<%= f.submit "Email this person!", class: "btn btn-small btn-primary" %>
+  <% end %> 
 </li>

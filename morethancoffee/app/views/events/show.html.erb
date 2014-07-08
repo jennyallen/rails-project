@@ -3,11 +3,13 @@
       <ol class="users">
       	<%= @event.name %>
       	(<%= @users.count %> are going)
-        <%= render @users %>
+       	<%= render @users %>
       </ol>
 
       <div class = "span8">
       	<%=render 'attendance_form' %>
       </div>
+
+ 	 
  
 </div>

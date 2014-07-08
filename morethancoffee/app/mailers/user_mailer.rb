@@ -6,6 +6,8 @@ class UserMailer < ActionMailer::Base
   	@receiver = receiver
   	@event = event
 
+  	puts @receiver.email
+
   	mail(to: @receiver.email, subject: "Someone wants to get more than coffee with you!")
   end
 
