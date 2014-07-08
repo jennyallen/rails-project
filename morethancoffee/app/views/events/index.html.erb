@@ -1,10 +1,15 @@
 <% provide(:title, 'Events') %>
 <h1>Events</h1>
 
-<ul class="events">
-  <% @events.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
-  <% end %>
-</ul>
+<div class = "container col-md-4" >
+	<ul class="events">
+  		<% @events.each do |event| %>
+  			<div>
+			    <div class = "single-event">
+			      <%= link_to event.name, event %>
+			      <img src= <%=event.picture%> class = "event-picture">
+			    <div>
+			</div>
+		<% end %>
+	</ul>
+</div?
