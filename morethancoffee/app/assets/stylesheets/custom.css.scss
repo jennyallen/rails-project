@@ -17,6 +17,14 @@ html {
 
 body {
   padding-top: 60px;
+  font-family: Matilde;
+  font-size: 2.4em;
+}
+
+body li{
+  padding-top: 60px;
+  /*font-size: 2em;*/
+  font-family: Matilde;
 }
 
 section {
@@ -41,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  /*font-size: 6em;*/
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -49,7 +57,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -68,7 +76,8 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  /*font-size: 3em;*/
+  font-family: Matilde;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -79,6 +88,11 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+.navbar li{
+  padding-top: 5px;
+  /*font-size: 2.5em;*/
 }
 
 /* footer */
