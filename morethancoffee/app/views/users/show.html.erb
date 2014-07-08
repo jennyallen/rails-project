@@ -6,6 +6,14 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <%= @user.age %>
+      <%= @user.lookingfor %>
+      <%= @user.genderpref %>
     </section>
+    <%= link_to "Edit", edit_user_path(current_user) %>
+    <%= link_to "Events", events_path %>
+    Events that <%=@user.name %> is attending <% @user.events.each do |event| %>
+    										<%= link_to event.name, event_path(event.id) %>
+    										 <% end %>
   </aside>
 </div>
