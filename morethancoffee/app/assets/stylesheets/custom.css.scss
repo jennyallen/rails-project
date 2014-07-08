@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+@font-face {
+font-family: Matilde;
+src: url("/TDF_Matilde/matilde.otf") format("opentype");
+}
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -40,6 +45,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: Matilde;
 }
 
 h2 {
