@@ -1,11 +1,14 @@
 <li>
-  <span class="name"><%= link_to user.name, user_path(user.id) %></span>
   <span class="gravatar"> 
      <%= gravatar_for user %>
   </span>
+  <span class="name"><%= link_to user.name, user_path(user.id) %></span>
+  
 
-  <%= form_for user, url: {action: "update"} do |f| %>
+  <div class = "email-button">
+  	<%= form_for user, url: {action: "update"} do |f| %>
   		<%= f.hidden_field :receiver_id, :value => user.id %>
-  		<%= f.submit "Email this person!", class: "btn btn-small btn-primary" %>
-  <% end %> 
+  		<%= f.submit "Email this person!", class: "custom-button btn btn-small btn-primary" %>
+  	<% end %> 
+  </div>
 </li>

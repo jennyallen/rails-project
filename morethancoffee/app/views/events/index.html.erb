@@ -11,7 +11,12 @@
 				<div class = "span4">
 					<div class = "event" >
 						<div class = "event-pic"> <img src = <%=event.picture%> ></div>
-						<div class = "description"><%= link_to event.name, event %></div>
+						<div class = "description">
+							<%= link_to event.name, event %>
+							<br>
+							Start Time: <%=event.start_time.strftime("%m-%d-%Y, %I:%M%p")%><br>
+							End Time: <%=event.end_time.strftime("%m-%d-%Y, %I:%M%p")%>
+						</div>
 						
 				    </div>
 			    </div>

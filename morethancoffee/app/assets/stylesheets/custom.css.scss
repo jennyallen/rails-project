@@ -19,7 +19,15 @@ body {
   padding-top: 60px;
   font-family: Matilde;
   font-size: 2.4em;
+  line-height: 1em;
+  background-image: url('/love-birds.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding-right: 3px;
+  padding-left: 3px;
 }
+
 
 body li{
   padding-top: 20px;
@@ -70,6 +78,25 @@ p {
   line-height: 1.7em;
 }
 
+#help{
+  text-align: center
+}
+
+.button-custom{
+  display: block;
+}
+
+.main-border{
+  padding-top: 3px;
+  border: 1px solid $grayMediumLight;
+  margin: auto;
+  width: 10px;
+
+}
+
+body label{
+  font-size: .8em;
+}
 
 /* header */
 
@@ -121,6 +148,7 @@ footer {
   }
 }
 
+/*Events page */
 .container{
   padding-left: 10px;
   padding-right: 10px;
@@ -152,6 +180,7 @@ footer {
 .event-pic img {
   height: 100%;
   width: 100%;
+  border-radius: 25px;
   transition: 0.5s ease;
 }
 
@@ -161,16 +190,36 @@ footer {
 
 .event:hover .description {
   visibility: visible;
+  background-color: white;
 }
 
 .description{
   height: 100%;
   width: 100%;
   position: absolute;
-  padding-top: 10px;
+  padding-top: 20px;
   left: 0px;
   visibility: hidden;
+  border-radius: 25px;
+  /*background-color: white;*/
   transition: 0.5s ease;
+
+}
+
+/*Buttons*/
+.email-button {
+  display: inline-block;
+
+}
+
+.custom-button{
+  font-family: Matilde;
+  font-size: 22px;
+}
+
+.custom-button-big{
+  font-family: Matilde;
+  font-size: 35px;
 }
 
 $grayMediumLight: #eaeaea;

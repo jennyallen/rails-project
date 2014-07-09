@@ -6,7 +6,8 @@ Morethancoffee::Application.routes.draw do
   resources :events
   resources :sessions, only: [:new, :create, :destroy]
   resources :attendances, only: [:create, :destroy]
-  get "events/email"
+
+  post "users/email"
   root  "users#new"
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
