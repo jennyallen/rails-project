@@ -13,13 +13,6 @@
       				<ul>
       				<% @user.events.each do |event| %>
     				<li> <%= link_to event.name, event_path(event.id) %> </li>
-             <div class = "email-button">
-                    <%= form_for @email, url: {action: "update"} do |f| %>
-                      <%= f.hidden_field :receiver_id, :value => @user.id %>
-                      <%= f.hidden_field :event_id, :value => event.id %>
-                      <%= f.submit "Email about this event!", class: "custom-button btn btn-small btn-primary" %>
-                    <% end %> 
-                  </div>
     				<% end %>
     				</ul>
     <%if @user == current_user%>
