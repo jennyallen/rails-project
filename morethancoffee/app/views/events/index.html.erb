@@ -1,15 +1,22 @@
 <% provide(:title, 'Events') %>
 <h1>Events</h1>
 
-<div class = "container col-md-4" >
-	<ul class="events">
-  		<% @events.each do |event| %>
-  			<div>
-			    <div class = "single-event">
-			      <%= link_to event.name, event %>
-			      <img src= <%=event.picture%> class = "event-picture">
-			    <div>
-			</div>
-		<% end %>
-	</ul>
-</div?
+
+<div class = "container">
+	<% count = 1 %>
+	<% while @events.count >= count %>
+		<div class = "row">
+			<% (0..2).each do |index| %>
+				<%event = Event.find(count)%>
+				<div class = "span4">
+					<div class = "event" >
+						<div class = "event-pic"> <img src = <%=event.picture%> ></div>
+						<div class = "description"><%= link_to event.name, event %></div>
+						
+				    </div>
+			    </div>
+			    <%count += 1%>
+			<%end%>
+		</div>	
+	<%end%>			
+</div>

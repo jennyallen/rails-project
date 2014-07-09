@@ -121,6 +121,58 @@ footer {
   }
 }
 
+.container{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.event {
+  position: relative;
+  height: 250px;
+  text-align: center;
+  overflow: hidden;
+  border-style: solid;
+  border-color: black; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+
+}
+
+.event-pic {
+  position: absolute;
+  /*bottom: 0px;*/
+  /*left: 0px;*/
+  /*background-size: 100%;*/
+  height: 100%;
+  width: 100%;
+  /*transition: 0.5s ease;*/
+}
+
+.event-pic img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.event:hover .event-pic img {
+  opacity: 0;
+}
+
+.event:hover .description {
+  visibility: visible;
+}
+
+.description{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 10px;
+  left: 0px;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
