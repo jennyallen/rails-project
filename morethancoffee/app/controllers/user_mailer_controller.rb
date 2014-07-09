@@ -1,2 +1,0 @@
-class UserMailerController < ApplicationController
-end
